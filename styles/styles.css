@@ -1,0 +1,204 @@
+body{
+  margin: 0px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-y: scroll;
+}
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+  div.main{
+    width: 1000px;
+    border: 2px solid #82B300;
+    border-top-width: 0px;
+    margin: 0 auto;
+    background-color: #FFF;
+  }
+    div.main div.links{
+      text-align: center;
+      height: 25px;
+      background-color: #82B300;
+    }
+      div.main div.links ul{
+        background: -webkit-gradient(linear,right bottom,right top,from(#7aa700),to(#8dc100)) #8dc100;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+        div.main div.links ul li:hover{
+          background: -webkit-gradient(linear,right bottom,right top,from(#638800),to(#7AA700)) #7AA700;
+        }
+
+        div.main div.links ul li{
+          display: inline-block;
+          /*width: 100px;*/
+          margin-left: 0px;
+          margin-right: 0px;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin: 0px -2px 0px -3px;
+          height: 21px;
+          position: relative;
+          top: -5px;
+          padding-top: 9px;
+        }
+          div.main div.links ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 11px;
+          }
+
+    div.main div.header{
+      text-align: center;
+      height: 85px;
+      font-size: 60px;
+      padding-top: 15px;
+    }
+    div.main div.menu{
+      text-align: center;
+      height: 45px;
+      background: -webkit-gradient(linear, left top, left bottom, from(#f48e00), to(#f56d00));
+    }
+      div.main div.menu div.date{
+        position: absolute;
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 11px;
+        font-weight: bold;
+      }
+
+      div.main div.menu ul{
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+        div.main div.menu ul li:hover,
+        div.main div.menu ul li.selected{
+          /*background: -webkit-gradient(linear, left top, left bottom, from(#ee5a00), to(#ee3204));*/
+          background: -webkit-gradient(linear, left top, left bottom, from(#346487), to(#214056));
+        }
+
+        div.main div.menu ul li{
+          background: -webkit-gradient(linear, left top, left bottom, from(#498ABA), to(#336488));
+          display: inline-block;
+          height: 18px;
+          padding: 15px 20px 12px 20px;
+          margin: 0px -3px 0px -2px;
+        }
+          div.main div.menu ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: none;
+            font-size: 12px;
+            height: 100%;
+          }
+    div.main div.content{
+      border: 1px solid #cacaca;
+      background: #eee;
+      margin: 10px 10px 10px 10px;
+      padding-bottom: 20px;
+    }
+        div.main div.content div div.title{
+          font-weight: bold;
+          font-size: 20px;
+          font-variant: small-caps;
+          position: absolute;
+          top: -22px;
+          left: 15px;
+          text-decoration: underline;
+        }
+
+/* SQL-Backup specifics */
+
+  div.database{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 10px;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    background: white;
+    display: inline-block;
+    width: 434px;
+    vertical-align: top;
+  }
+    div.database div.titre{
+      font-weight: bold;
+      font-size: 20px;
+      font-variant: small-caps;
+      position: absolute;
+      top: -22px;
+      left: 15px;
+      text-decoration: underline;
+    }
+    div.database div.newBackup{
+      padding-left: 25px;
+      height: 50px;
+      position: relative;
+    }
+      div.database div.newBackup div.text{
+        width: 150px;
+        height: 50px;
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+      }
+      div.database div.newBackup div.text a{
+        color: #000;
+        text-decoration: none;
+      }
+      div.database div.newBackup div.text a:hover{
+        color: #0064CD;
+        text-decoration: underline;
+      }
+      div.database div.newBackup div.status{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        position: absolute;
+        left: 175px;
+      }
+      div.database iframe{
+        border: 0px;
+        width: 100%;
+        height: 205px;
+      }
+
+/* database.php */
+  body.iframe{
+    overflow-y: hidden;
+  }
+    div.iframe{
+      background-color: #FFF;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+      div.iframe ul.last li.normal{
+        color: #009900;
+        font-weight: bold;
+      }
+      div.iframe ul.last li.warning{
+        color: #FFCC00;
+        font-weight: bold;
+      }
+      div.iframe ul.last li.error{
+        color: #FF0000;
+        font-weight: bold;
+      }
+      div.iframe ul{
+        font-size: 14px;
+      }
+        div.iframe ul lh{
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+        div.iframe ul li{
+          margin-top: 2px;
+        }
