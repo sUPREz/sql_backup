@@ -18,12 +18,16 @@
   if( isset( $_REQUEST['id'] ) ){
     $database = $_REQUEST['id'];
 
-    if( !is_dir($_CONFIG['backup_folders'].'/'.$database) ){
-      mkdir( $_CONFIG['backup_folders'].'/'.$database );
+    $folder = $_CONFIG['backup_folders'].'/'.$database;
+
+    if( !is_dir($folder) ){
+      mkdir( $folder );
     }
 
-    $fileList = scandir( $_CONFIG['backup_folders'].'/'.$database , 1 );
+    $fileList = scandir( $folder , 1 );
     $fileList = array_filter( $fileList , "listdir_ignore" );
+
+    //print_r($fileList);
 
     //$html_backup_ul .= replace_backupList_header( $database );
     if( count($fileList) == 0){
@@ -45,8 +49,21 @@
       $i = 0;
       foreach( $fileList as $file) {
 
+        $pathAndFile = $folder.'/'.$file;
+
         $fileDate = get_formated_interval_and_datetime_from_filename( $file );
-        $html_backup_li .= replace_backupList_backup_li( $fileDate[0] , $fileDate[1] );
+
+        $filesize = filesize( $pathAndFile );
+        //echo $pathAndFile.'  > '.$filesize.'<br>';
+        if( $filesize >= 1024 && $filesize < 1048576){
+          $filesize = round( ($filesize/1024) ).' kb';
+        } else if( $filesize >= 1048576 ){
+          $filesize = round( ($filesize/(1048576) ) , 2 ).' Mb';
+        } else {
+          $filesize = $filesize.' b';
+        }
+
+        $html_backup_li .= replace_backupList_backup_li( $fileDate[0] , $fileDate[1] , $filesize );
 
         $i++;
         if( $i >= $_CONFIG['backupList_number'] ) //5

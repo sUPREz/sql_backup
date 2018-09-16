@@ -2,7 +2,7 @@
 $_CONFIG['backup_folders'] = 'sql-backup';
 $_CONFIG['backup_delimiter'] = '#';
 $_CONFIG['backupList_number'] = 5;
-$_CONFIG['database_list'] = array('cuisine','series_v2.0','series_v2.1','master_league','sexyset','text_editor','life_achievements');
+$_CONFIG['database_list'] = array('cuisine','series_v2.0','series_v2.1','series_v3.0','series_v4.0','master_league','sexyset','text_editor','life_achievements');
 $_CONFIG['listdir_ignore'] = array('.','..');
 $_CONFIG['current_date_and_time'] = new DateTime;
 //$_CONFIG['date_and_time_interval_format'] = "%m month(s), %d day(s), %h hour(s), %i minute(s) and %s second(s)";

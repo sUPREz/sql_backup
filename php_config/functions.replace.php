@@ -20,11 +20,12 @@ function replace_backupList_backup_ul( $nom , $nombre ){
   $ligne = str_replace( '[[NOMBRE]]' , $nombre , $ligne );
   return $ligne;
 }
-function replace_backupList_backup_li( $interval , $datetime ){
+function replace_backupList_backup_li( $interval , $datetime , $filesize ){
   global $_HTML;
   $ligne = $_HTML['backupList_backup_li'];
   $ligne = str_replace( '[[INTERVAL]]' , $interval , $ligne );
   $ligne = str_replace( '[[DATETIME]]' , $datetime , $ligne );
+  $ligne = str_replace( '[[FILESIZE]]' , $filesize , $ligne );
   return $ligne;
 }
 function replace_backupList_last_ul( $content ){
